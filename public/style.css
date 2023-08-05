@@ -1,0 +1,122 @@
+body{
+    background-color: #9b9892;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+h2{
+    text-align: center;
+    font-family: 'DM Serif Display', serif;
+    color: aliceblue;
+    text-shadow:1px 2px #91C8E4;
+}
+h2>span{
+    color: rgb(16, 16, 16);
+    font-weight: bolder;
+    line-height: 20px;
+}
+h1{
+    margin: 60px;
+   text-align: center;
+    font-weight: lighter;
+    color: aliceblue;
+    text-shadow:1px 2px #91C8E4;
+    font-size: 3rem;
+    word-spacing: 10px;
+}
+
+#input-field{
+    width: 50%;
+    padding: 10px;
+    margin: 100px 25%;
+    border-radius: 10px;
+    height: 500px;background-color: #dacbae;
+    margin-bottom: 100px;
+}
+#input-field form{
+    display: flex;
+    gap: 4rem;
+    font-family: 'Inter', sans-serif;
+    flex-direction: column;
+    background-color: rgb(228, 225, 225);
+    width: 100%;
+    height: 100%;
+    padding: 20px;box-sizing: border-box;
+}
+.latdiv,.londiv{
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    
+    height: fit-content;
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 20px;
+    color: #7D7463;
+    font-weight: bolder;
+}
+.textWidth{
+    width: 130px;
+    background-color: #7D7463;
+    height: 2.5rem;
+    text-align: center;
+    border-radius: 10px;
+    padding-top: 5px;
+    background-image: linear-gradient(to bottom right,#7D7463,rgb(162, 230, 233));
+}
+.latdiv .latLabel,.lonLabel{
+    font-size: 1.3rem;
+    color: white;
+}
+.latdiv #latInput,#lonInput{
+    width: 60%;
+    height: 3.6em;
+    border: 0.01em solid #7D7463;
+    border-radius: 10px;
+    padding: 8px;box-sizing: border-box;
+    
+
+}
+.latdiv #latInput::placeholder,#lonInput::placeholder{
+    color: #7D7463;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 23px;
+    
+    
+}
+input[type="submit"]{
+    background-color: #7D7463;
+    width: 120px;
+    height: 50px;
+    color: white;
+    font-size: 20px;font-weight: bolder;
+    align-self: center;
+     border: 3px solid black ;
+     border-radius: 20px;
+     box-shadow: 1px 7px #7D7463;
+     background-image: linear-gradient(to bottom right,rgb(162, 230, 233),#7D7463);
+}
+
+
+@media(max-width:938px){
+    h1{
+        font-size: 2.3rem;
+        word-spacing: 10px;
+        margin: 30px 0;
+        padding: 0;
+    }
+    .latdiv,.londiv{
+        flex-direction: column;
+        gap: 6px;
+    }
+    .latdiv #latInput,#lonInput{
+        width: 100%;
+    }
+    #input-field{
+        width: 100%;
+       
+        margin:100px 0;
+    }
+    
+}

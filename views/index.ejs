@@ -1,0 +1,54 @@
+<%- include('partials/header.ejs') %>
+
+   <% if (locals.data) { %>
+     <% if (data>0 && data < 4) { %>
+      <h2>Today's UV is <%= data %>.Low UV index.</h2>
+      <h2>
+        No protection required, but it's always
+         a good idea to wear sunscreen and
+         protective clothing when you're outside for extended periods.</h2>
+     <% } else if (data< 7 && data >4) { %>
+      <h2>Today's UV is <%= data %>: High UV index.</h2>
+      <h2>
+        Sunscreen and protective clothing are recommended,
+         especially during midday hours when the sun is strongest.
+      </h2>
+       <% } else if (data >8 && data < 10){ %>
+           <h2>Today's UV is <%= data %> :Very high UV index </h2>
+           <h2>
+            Sunscreen, protective clothing,
+             and shade are strongly recommended, especially during midday hours
+            </h2>
+        <%} else{%>
+          <h2>Today's UV is <%= data %> : Extreme UV index. </h2>
+           <h2>
+            Avoid sun exposure during midday hours, 
+            wear protective clothing, seek shade, and apply sunscreen frequently.
+            </h2>
+          <% } %>
+   
+   <% } else { %>
+    <h1>Let's find out UV strength of today.</h1>
+    <h2>Available Locations: Latitude, from <span>-90.00 </span>to <span>90.00</span>
+       and Longitude, from <span>-180.00</span> to<span>180.00</span> </h2>
+    <% } %>
+
+    
+    <div id="input-field">
+       <form id="myForm" method="post" action="/">
+        <div class="latdiv">
+            <div class="textWidth">
+         <label for="latInput" class="latLabel">Latitude</label>
+           </div>
+         <input type="text" name="latitude" id="latInput" placeholder="Type Latitude " autofocus/>
+        </div>
+        <div class="londiv">
+            <div class="textWidth">
+         <label for="lonInput" class="lonLabel">Longitude</label>
+        </div>
+         <input type="text" name="Longitude" id="lonInput" placeholder="Type Longitude "/>
+        </div>
+         <input type="submit" value="Check">
+       </form>
+    </div>
+<%- include('partials/footer.ejs') %>
